@@ -1,6 +1,24 @@
-<div>
-  <div style="display: block" *ngIf="isDataAvailable">
-    <canvas baseChart [datasets]="xChartData" [labels]="xChartLabels" [options]="xChartOptions" [legend]="xChartLegend"
-      [chartType]="xChartType"></canvas>
+<div *ngIf="isDataAvailable; else noData">
+  <div *ngIf="metric; else loader">
+    <div class="custom-radio-label">Choose a chart type - </div>
+    <mat-radio-group class="custom-radio-group" [(ngModel)]="xChartType">
+      <mat-radio-button class="custom-radio-button" *ngFor="let chartType of chartTypesArray" [value]="chartType">
+        {{chartType}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <div style="display: block">
+      <canvas baseChart [datasets]="xChartData" [labels]="xChartLabels" [options]="xChartOptions" [legend]="xChartLegend"
+        [chartType]="xChartType"></canvas>
+    </div>
   </div>
+  <ng-template #loader>
+    <div fxLayoutAlign="center">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
 </div>
+<ng-template #noData>
+  <div fxLayoutAlign="center">
+    <h3>Sorry, there is no data available for your request!</h3>
+  </div>
+</ng-template>

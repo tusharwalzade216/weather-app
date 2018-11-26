@@ -1,0 +1,903 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>weather-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">weather-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WeatherHomeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/weather/weather-home/weather-home.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-weather-home</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>weather-home.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./weather-home.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#chartData">chartData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#chartLocation">chartLocation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#chartMetric">chartMetric</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#inputObj">inputObj</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#locationsArray">locationsArray</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#metricsArray">metricsArray</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getAllMonthsBetweenTwoDates">getAllMonthsBetweenTwoDates</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit">onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_weatherService: <a href="../injectables/WeatherService.html">WeatherService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_weatherService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/WeatherService.html" target="_self" >WeatherService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getAllMonthsBetweenTwoDates"></a>
+                        <span class="name">
+                            <b>
+                            getAllMonthsBetweenTwoDates
+                            </b>
+                            <a href="#getAllMonthsBetweenTwoDates"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getAllMonthsBetweenTwoDates(startDate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, endDate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>startDate</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>A start date in this format YYYY-MM-d</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>endDate</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>A end date in this format YYYY-MM-d</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Array&lt;String&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>A String array with months, eg. 2018-6</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSubmit"></a>
+                        <span class="name">
+                            <b>
+                            onSubmit
+                            </b>
+                            <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onSubmit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:86</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>void</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="chartData"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            chartData
+                            </b>
+                            <a href="#chartData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>chartData:     <code>Array&lt;Object&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;Object&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="chartLocation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            chartLocation
+                            </b>
+                            <a href="#chartLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>chartLocation:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:65</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="chartMetric"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            chartMetric
+                            </b>
+                            <a href="#chartMetric"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>chartMetric:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inputObj"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            inputObj
+                            </b>
+                            <a href="#inputObj"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>inputObj:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    fromDate: _moment().subtract(2, &#x27;years&#x27;),
+    toDate: _moment(),
+    selectedMetric: &#x27;Tmax&#x27;,
+    selectedLocation: &#x27;UK&#x27;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locationsArray"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            locationsArray
+                            </b>
+                            <a href="#locationsArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>locationsArray:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    { key: &#x27;UK&#x27;, value: &#x27;UK&#x27; },
+    { key: &#x27;England&#x27;, value: &#x27;England&#x27; },
+    { key: &#x27;Scotland&#x27;, value: &#x27;Scotland&#x27; },
+    { key: &#x27;Wales&#x27;, value: &#x27;Wales&#x27; }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metricsArray"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            metricsArray
+                            </b>
+                            <a href="#metricsArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>metricsArray:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    { key: &#x27;Max Temperature&#x27;, value: &#x27;Tmax&#x27; },
+    { key: &#x27;Min Temperature&#x27;, value: &#x27;Tmin&#x27; },
+    { key: &#x27;Rainfall&#x27;, value: &#x27;Rainfall&#x27; }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/weather/weather-home/weather-home.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import * as _moment from &#x27;moment&#x27;;
+
+import { WeatherService } from &#x27;src/app/services/weather.service&#x27;;
+
+@Component({
+  selector: &#x27;app-weather-home&#x27;,
+  templateUrl: &#x27;./weather-home.component.html&#x27;,
+  styleUrls: [&#x27;./weather-home.component.scss&#x27;]
+})
+export class WeatherHomeComponent {
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @member metricsArray
+   * @description A JSON array containing all the metrics shown in the form
+   */
+  public metricsArray &#x3D; [
+    { key: &#x27;Max Temperature&#x27;, value: &#x27;Tmax&#x27; },
+    { key: &#x27;Min Temperature&#x27;, value: &#x27;Tmin&#x27; },
+    { key: &#x27;Rainfall&#x27;, value: &#x27;Rainfall&#x27; }
+  ];
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @member locationsArray
+   * @description A JSON array containing all the locations shown in the form
+   */
+  public locationsArray &#x3D; [
+    { key: &#x27;UK&#x27;, value: &#x27;UK&#x27; },
+    { key: &#x27;England&#x27;, value: &#x27;England&#x27; },
+    { key: &#x27;Scotland&#x27;, value: &#x27;Scotland&#x27; },
+    { key: &#x27;Wales&#x27;, value: &#x27;Wales&#x27; }
+  ];
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @member inputObj
+   * @description An object bound to the form; sets default input values
+   */
+  public inputObj &#x3D; {
+    fromDate: _moment().subtract(2, &#x27;years&#x27;),
+    toDate: _moment(),
+    selectedMetric: &#x27;Tmax&#x27;,
+    selectedLocation: &#x27;UK&#x27;
+  }
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @member chartData
+   * @description An array of objects to hold the data to be sent to chart component
+   */
+  public chartData: Array&lt;Object&gt; &#x3D; [];
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @member chartLocation
+   * @description A string to hold the location to be sent to the toolbar
+   */
+  public chartLocation: String;
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @member chartData
+   * @description A string to hold the selected metric to be sent to chart component
+   */
+  public chartMetric: String;
+
+  constructor(private _weatherService: WeatherService) {
+    this.onSubmit();
+  }
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @method onSubmit
+   * @description A method to get weather data from the service
+   * @returns void
+   */
+  onSubmit() {
+    this.chartData &#x3D; [], this.chartMetric &#x3D; undefined, this.chartLocation &#x3D; undefined;
+
+    const monthsBetweenArray &#x3D; this.getAllMonthsBetweenTwoDates(this.inputObj.fromDate.format(&#x27;YYYY-MM-d&#x27;), this.inputObj.toDate.format(&#x27;YYYY-MM-d&#x27;));
+
+    this._weatherService.getDataByMetricLocation(this.inputObj.selectedMetric, this.inputObj.selectedLocation).subscribe((res) &#x3D;&gt; {
+      let filteredData &#x3D; [];
+      for (let index &#x3D; 0; index &lt; res.length; index++) {
+        if (monthsBetweenArray.includes([res[index][&#x27;year&#x27;], res[index][&#x27;month&#x27;]].join(&#x27;-&#x27;))) {
+          filteredData.push(res[index]);
+        }
+      }
+      this.chartData &#x3D; filteredData;
+      this.chartMetric &#x3D; this.inputObj.selectedMetric;
+      this.chartLocation &#x3D; this.inputObj.selectedLocation;
+    });
+  }
+
+  /**
+   * @package Weather
+   * @class WeatherHomeComponent
+   * @method getAllMonthsBetweenTwoDates
+   * @description A method to return months between the two given dates
+   * @param startDate A start date in this format YYYY-MM-d
+   * @param endDate A end date in this format YYYY-MM-d
+   * @returns A String array with months, eg. 2018-6
+   */
+  getAllMonthsBetweenTwoDates(startDate: String, endDate: String): Array&lt;String&gt; {
+    var start &#x3D; startDate.split(&#x27;-&#x27;);
+    var end &#x3D; endDate.split(&#x27;-&#x27;);
+    var startYear &#x3D; parseInt(start[0]);
+    var endYear &#x3D; parseInt(end[0]);
+    var dates &#x3D; [];
+
+    for (var i &#x3D; startYear; i &lt;&#x3D; endYear; i++) {
+      var endMonth &#x3D; i !&#x3D; endYear ? 11 : parseInt(end[1]) - 1;
+      var startMon &#x3D; i &#x3D;&#x3D;&#x3D; startYear ? parseInt(start[1]) - 1 : 0;
+      for (var j &#x3D; startMon; j &lt;&#x3D; endMonth; j &#x3D; j &gt; 12 ? j % 12 || 11 : j + 1) {
+        var month &#x3D; j + 1;
+        dates.push([i, month].join(&#x27;-&#x27;));
+      }
+    }
+    return dates;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot; role&#x3D;&quot;heading&quot;&gt;
+  &lt;mat-toolbar-row&gt;
+    &lt;mat-icon class&#x3D;&quot;custom-icon&quot;&gt;developer_board&lt;/mat-icon&gt;
+    &lt;span&gt;Weather Statistics : {{ chartLocation }}&lt;/span&gt;
+    &lt;span class&#x3D;&quot;custom-spacer&quot;&gt;&lt;/span&gt;
+    &lt;mat-icon class&#x3D;&quot;custom-icon&quot;&gt;multiline_chart&lt;/mat-icon&gt;
+  &lt;/mat-toolbar-row&gt;
+&lt;/mat-toolbar&gt;
+&lt;mat-card&gt;
+  &lt;mat-card-header&gt;&lt;/mat-card-header&gt;
+  &lt;mat-card-content&gt;
+    &lt;div fxLayout&#x3D;&quot;row&quot; fxLayout.xs&#x3D;&quot;column&quot; fxLayoutWrap fxLayoutGap&#x3D;&quot;2%&quot; fxLayoutAlign&#x3D;&quot;center&quot;&gt;
+      &lt;div fxFlex&#x3D;&quot;20%&quot; fxLayout&#x3D;&quot;column&quot; fxLayout.xs&#x3D;&quot;column&quot; fxLayoutWrap fxLayoutGap&#x3D;&quot;0.5%&quot; fxLayoutAlign&#x3D;&quot;start&quot;&gt;
+        &lt;mat-form-field&gt;
+          &lt;mat-select placeholder&#x3D;&quot;Select a metric&quot; [(ngModel)]&#x3D;&quot;inputObj.selectedMetric&quot; required&gt;
+            &lt;mat-option&gt;--&lt;/mat-option&gt;
+            &lt;mat-option *ngFor&#x3D;&quot;let metric of metricsArray&quot; [value]&#x3D;&quot;metric.value&quot;&gt;
+              {{metric.key}}
+            &lt;/mat-option&gt;
+          &lt;/mat-select&gt;
+        &lt;/mat-form-field&gt;
+
+        &lt;mat-form-field&gt;
+          &lt;mat-select placeholder&#x3D;&quot;Selct a location&quot; [(ngModel)]&#x3D;&quot;inputObj.selectedLocation&quot; required&gt;
+            &lt;mat-option&gt;--&lt;/mat-option&gt;
+            &lt;mat-option *ngFor&#x3D;&quot;let location of locationsArray&quot; [value]&#x3D;&quot;location.value&quot;&gt;
+              {{location.key}}
+            &lt;/mat-option&gt;
+          &lt;/mat-select&gt;
+        &lt;/mat-form-field&gt;
+
+        &lt;mat-form-field&gt;
+          &lt;input matInput [matDatepicker]&#x3D;&quot;fromDatePicker&quot; placeholder&#x3D;&quot;Choose a from date&quot; [(ngModel)]&#x3D;&quot;inputObj.fromDate&quot;&gt;
+          &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;fromDatePicker&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+          &lt;mat-datepicker #fromDatePicker&gt;&lt;/mat-datepicker&gt;
+        &lt;/mat-form-field&gt;
+
+        &lt;mat-form-field&gt;
+          &lt;input matInput [matDatepicker]&#x3D;&quot;toDatePicker&quot; placeholder&#x3D;&quot;Choose a to date&quot; [(ngModel)]&#x3D;&quot;inputObj.toDate&quot;&gt;
+          &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;toDatePicker&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+          &lt;mat-datepicker #toDatePicker&gt;&lt;/mat-datepicker&gt;
+        &lt;/mat-form-field&gt;
+
+        &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSubmit()&quot; class&#x3D;&quot;custom-btn&quot;&gt;Submit&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div fxFlex&#x3D;&quot;80%&quot; fxLayout&#x3D;&quot;column&quot; fxLayout.xs&#x3D;&quot;column&quot; fxLayoutWrap fxLayoutGap&#x3D;&quot;0.5%&quot; fxLayoutAlign&#x3D;&quot;center&quot;&gt;
+        &lt;app-weather-chart [chartData]&#x3D;&quot;chartData&quot; [metric]&#x3D;&quot;chartMetric&quot; fxFlexFill&gt;&lt;/app-weather-chart&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/mat-card-content&gt;
+&lt;/mat-card&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary" role="heading">  <mat-toolbar-row>    <mat-icon class="custom-icon">developer_board</mat-icon>    <span>Weather Statistics : {{ chartLocation }}</span>    <span class="custom-spacer"></span>    <mat-icon class="custom-icon">multiline_chart</mat-icon>  </mat-toolbar-row></mat-toolbar><mat-card>  <mat-card-header></mat-card-header>  <mat-card-content>    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="center">      <div fxFlex="20%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start">        <mat-form-field>          <mat-select placeholder="Select a metric" [(ngModel)]="inputObj.selectedMetric" required>            <mat-option>--</mat-option>            <mat-option *ngFor="let metric of metricsArray" [value]="metric.value">              {{metric.key}}            </mat-option>          </mat-select>        </mat-form-field>        <mat-form-field>          <mat-select placeholder="Selct a location" [(ngModel)]="inputObj.selectedLocation" required>            <mat-option>--</mat-option>            <mat-option *ngFor="let location of locationsArray" [value]="location.value">              {{location.key}}            </mat-option>          </mat-select>        </mat-form-field>        <mat-form-field>          <input matInput [matDatepicker]="fromDatePicker" placeholder="Choose a from date" [(ngModel)]="inputObj.fromDate">          <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>          <mat-datepicker #fromDatePicker></mat-datepicker>        </mat-form-field>        <mat-form-field>          <input matInput [matDatepicker]="toDatePicker" placeholder="Choose a to date" [(ngModel)]="inputObj.toDate">          <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>          <mat-datepicker #toDatePicker></mat-datepicker>        </mat-form-field>        <button mat-raised-button color="primary" (click)="onSubmit()" class="custom-btn">Submit</button>      </div>      <div fxFlex="80%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">        <app-weather-chart [chartData]="chartData" [metric]="chartMetric" fxFlexFill></app-weather-chart>      </div>    </div>  </mat-card-content></mat-card></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'WeatherChartComponent', 'selector': 'app-weather-chart'},{'name': 'WeatherHomeComponent', 'selector': 'app-weather-home'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'WeatherHomeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WeatherHomeComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

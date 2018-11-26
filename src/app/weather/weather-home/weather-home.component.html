@@ -1,37 +1,52 @@
-<mat-form-field>
-  <mat-select placeholder="Select a metric" [(ngModel)]="inputObj.selectedMetric" required>
-    <mat-option>--</mat-option>
-    <mat-option *ngFor="let metric of metricsArray" [value]="metric.value">
-      {{metric.key}}
-    </mat-option>
-  </mat-select>
-  <!-- <mat-error *ngIf="metricControl.hasError('required')">Please choose a metric</mat-error> -->
-</mat-form-field>
+<mat-toolbar color="primary" role="heading">
+  <mat-toolbar-row>
+    <mat-icon class="custom-icon">developer_board</mat-icon>
+    <span>Weather Statistics : {{ chartLocation }}</span>
+    <span class="custom-spacer"></span>
+    <mat-icon class="custom-icon">multiline_chart</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-card>
+  <mat-card-header></mat-card-header>
+  <mat-card-content>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="center">
+      <div fxFlex="20%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start">
+        <mat-form-field>
+          <mat-select placeholder="Select a metric" [(ngModel)]="inputObj.selectedMetric" required>
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let metric of metricsArray" [value]="metric.value">
+              {{metric.key}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-<mat-form-field>
-  <mat-select placeholder="Selct a location" [(ngModel)]="inputObj.selectedLocation" required>
-    <mat-option>--</mat-option>
-    <mat-option *ngFor="let location of locationsArray" [value]="location.value">
-      {{location.key}}
-    </mat-option>
-  </mat-select>
-  <!-- <mat-error *ngIf="locationControl.hasError('required')">Please choose a location</mat-error> -->
-</mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Selct a location" [(ngModel)]="inputObj.selectedLocation" required>
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let location of locationsArray" [value]="location.value">
+              {{location.key}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-<mat-form-field class="example-full-width">
-  <input matInput [matDatepicker]="fromDatePicker" placeholder="Choose a from date" [(ngModel)]="inputObj.fromDate">
-  <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
-  <mat-datepicker #fromDatePicker></mat-datepicker>
-</mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="fromDatePicker" placeholder="Choose a from date" [(ngModel)]="inputObj.fromDate">
+          <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #fromDatePicker></mat-datepicker>
+        </mat-form-field>
 
-<mat-form-field class="example-full-width">
-  <input matInput [matDatepicker]="toDatePicker" placeholder="Choose a to date" [(ngModel)]="inputObj.toDate">
-  <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
-  <mat-datepicker #toDatePicker></mat-datepicker>
-</mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="toDatePicker" placeholder="Choose a to date" [(ngModel)]="inputObj.toDate">
+          <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #toDatePicker></mat-datepicker>
+        </mat-form-field>
 
-<button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()" class="custom-btn">Submit</button>
+      </div>
 
-<div class="example-button-row">
-  <app-weather-chart [chartData]="chartData" [metric]="chartMetric"></app-weather-chart>
-</div>
+      <div fxFlex="80%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+        <app-weather-chart [chartData]="chartData" [metric]="chartMetric" fxFlexFill></app-weather-chart>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

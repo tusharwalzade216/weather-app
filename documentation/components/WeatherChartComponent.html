@@ -1,0 +1,830 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>weather-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">weather-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WeatherChartComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/weather/weather-chart/weather-chart.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-weather-chart</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>weather-chart.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./weather-chart.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#chartTypesArray">chartTypesArray</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isDataAvailable">isDataAvailable</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#xChartData">xChartData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#xChartLabels">xChartLabels</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#xChartLegend">xChartLegend</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#xChartOptions">xChartOptions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#xChartType">xChartType</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#chartData">chartData</a>
+                            </li>
+                            <li>
+                                <a href="#metric">metric</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="chartData"></a>
+                        <code>chartData</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>Array&lt;Object&gt;</code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:17</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="metric"></a>
+                        <code>metric</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:25</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnChanges()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:95</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>void</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="chartTypesArray"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            chartTypesArray
+                            </b>
+                            <a href="#chartTypesArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>chartTypesArray:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;bar&#x27;, &#x27;line&#x27;, &#x27;radar&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDataAvailable"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isDataAvailable
+                            </b>
+                            <a href="#isDataAvailable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isDataAvailable:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:76</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xChartData"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            xChartData
+                            </b>
+                            <a href="#xChartData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>xChartData:     <code>Array&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:68</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xChartLabels"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            xChartLabels
+                            </b>
+                            <a href="#xChartLabels"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>xChartLabels:     <code>Array&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xChartLegend"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            xChartLegend
+                            </b>
+                            <a href="#xChartLegend"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>xChartLegend:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xChartOptions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            xChartOptions
+                            </b>
+                            <a href="#xChartOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>xChartOptions:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    scaleShowVerticalLines: false,
+    responsive: true
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xChartType"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            xChartType
+                            </b>
+                            <a href="#xChartType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>xChartType:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;line&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/weather/weather-chart/weather-chart.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnChanges } from &#x27;@angular/core&#x27;;
+import * as _moment from &#x27;moment&#x27;;
+
+@Component({
+  selector: &#x27;app-weather-chart&#x27;,
+  templateUrl: &#x27;./weather-chart.component.html&#x27;,
+  styleUrls: [&#x27;./weather-chart.component.scss&#x27;]
+})
+export class WeatherChartComponent implements OnChanges {
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member chartData
+   * @description A JSON array containing the chart data sent by the parent component
+   */
+  @Input() chartData: Array&lt;Object&gt;;
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member chartData
+   * @description A string containing the metric selected from the parent component
+   */
+  @Input() metric: String;
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member xChartOptions
+   * @description A JSON object containing the chart configurations
+   */
+  private xChartOptions: any &#x3D; {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member xChartLabels
+   * @description An array to hold the labels for the chart
+   */
+  private xChartLabels: Array&lt;any&gt;;
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member xChartType
+   * @description A string to hold the chart type
+   */
+  private xChartType: string &#x3D; &#x27;line&#x27;;
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member xChartLegend
+   * @description A flag to set whether the chart legends to be shown or not
+   */
+  private xChartLegend: boolean &#x3D; true;
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member xChartData
+   * @description A JSON array to hold the chart data to be used by the chart
+   */
+  private xChartData: Array&lt;any&gt;;
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member isDataAvailable
+   * @description A flag to show/ hide the chart on the basis of data availability
+   */
+  public isDataAvailable: boolean &#x3D; false;
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @member chartTypesArray
+   * @description An array containing all the chart types to be shown for selection
+   */
+  public chartTypesArray &#x3D; [&#x27;bar&#x27;, &#x27;line&#x27;, &#x27;radar&#x27;];
+
+  constructor() { }
+
+  /**
+   * @package Weather
+   * @class WeatherChartComponent
+   * @method ngOnChanges
+   * @description A lifecycle hook called on updation of chartData &amp; metric
+   * @returns void
+   */
+  ngOnChanges() {
+    if (this.chartData.length &amp;&amp; this.metric !&#x3D; undefined) {
+      this.isDataAvailable &#x3D; true;
+    }
+    let valuesArr &#x3D; [], labelsArr &#x3D; [];
+    this.chartData.forEach((obj) &#x3D;&gt; {
+      labelsArr.push(_moment().month(obj[&#x27;month&#x27;] - 1).format(&quot;MMM&quot;) + &#x27;\&#x27; &#x27; + obj[&#x27;year&#x27;]);
+      valuesArr.push(obj[&#x27;value&#x27;]);
+    });
+    this.xChartLabels &#x3D; labelsArr;
+    this.xChartData &#x3D; [
+      { data: valuesArr, label: this.metric }
+    ];
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;isDataAvailable; else noData&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;metric; else loader&quot;&gt;
+    &lt;div class&#x3D;&quot;custom-radio-label&quot;&gt;Choose a chart type - &lt;/div&gt;
+    &lt;mat-radio-group class&#x3D;&quot;custom-radio-group&quot; [(ngModel)]&#x3D;&quot;xChartType&quot;&gt;
+      &lt;mat-radio-button class&#x3D;&quot;custom-radio-button&quot; *ngFor&#x3D;&quot;let chartType of chartTypesArray&quot; [value]&#x3D;&quot;chartType&quot;&gt;
+        {{chartType}}
+      &lt;/mat-radio-button&gt;
+    &lt;/mat-radio-group&gt;
+    &lt;div style&#x3D;&quot;display: block&quot;&gt;
+      &lt;canvas baseChart [datasets]&#x3D;&quot;xChartData&quot; [labels]&#x3D;&quot;xChartLabels&quot; [options]&#x3D;&quot;xChartOptions&quot; [legend]&#x3D;&quot;xChartLegend&quot;
+        [chartType]&#x3D;&quot;xChartType&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;ng-template #loader&gt;
+    &lt;div fxLayoutAlign&#x3D;&quot;center&quot;&gt;
+      &lt;mat-spinner&gt;&lt;/mat-spinner&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/div&gt;
+&lt;ng-template #noData&gt;
+  &lt;div fxLayoutAlign&#x3D;&quot;center&quot;&gt;
+    &lt;h3&gt;Sorry, there is no data available for your request!&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="isDataAvailable; else noData">  <div *ngIf="metric; else loader">    <div class="custom-radio-label">Choose a chart type - </div>    <mat-radio-group class="custom-radio-group" [(ngModel)]="xChartType">      <mat-radio-button class="custom-radio-button" *ngFor="let chartType of chartTypesArray" [value]="chartType">        {{chartType}}      </mat-radio-button>    </mat-radio-group>    <div style="display: block">      <canvas baseChart [datasets]="xChartData" [labels]="xChartLabels" [options]="xChartOptions" [legend]="xChartLegend"        [chartType]="xChartType"></canvas>    </div>  </div>  <ng-template #loader>    <div fxLayoutAlign="center">      <mat-spinner></mat-spinner>    </div>  </ng-template></div><ng-template #noData>  <div fxLayoutAlign="center">    <h3>Sorry, there is no data available for your request!</h3>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'WeatherChartComponent', 'selector': 'app-weather-chart'},{'name': 'WeatherHomeComponent', 'selector': 'app-weather-home'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'WeatherChartComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WeatherChartComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
