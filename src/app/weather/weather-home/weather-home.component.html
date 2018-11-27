@@ -10,10 +10,12 @@
   <mat-card-header></mat-card-header>
   <mat-card-content>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="center">
-      <div fxFlex="20%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start">
+      <form #statsForm="ngForm" (submit)="onSubmit()" fxFlex="20%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap
+        fxLayoutGap="0.5%" fxLayoutAlign="start">
         <mat-form-field>
-          <mat-select placeholder="Select a metric" [(ngModel)]="inputObj.selectedMetric" required>
-            <mat-option>--</mat-option>
+          <mat-select placeholder="Select a metric" name="metric" #metric="ngModel" [(ngModel)]="inputObj.selectedMetric"
+            required>
+            <!-- <mat-option [value]="" disabled>--</mat-option> -->
             <mat-option *ngFor="let metric of metricsArray" [value]="metric.value">
               {{metric.key}}
             </mat-option>
@@ -21,8 +23,9 @@
         </mat-form-field>
 
         <mat-form-field>
-          <mat-select placeholder="Selct a location" [(ngModel)]="inputObj.selectedLocation" required>
-            <mat-option>--</mat-option>
+          <mat-select placeholder="Selct a location" name="location" #location="ngModel" [(ngModel)]="inputObj.selectedLocation"
+            required>
+            <!-- <mat-option [value]="" disabled>--</mat-option> -->
             <mat-option *ngFor="let location of locationsArray" [value]="location.value">
               {{location.key}}
             </mat-option>
@@ -30,19 +33,21 @@
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput [matDatepicker]="fromDatePicker" placeholder="Choose a from date" [(ngModel)]="inputObj.fromDate">
+          <input matInput [matDatepicker]="fromDatePicker" placeholder="Choose a from date" name="fromDate" #fromDate="ngModel"
+            [(ngModel)]="inputObj.fromDate">
           <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #fromDatePicker></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput [matDatepicker]="toDatePicker" placeholder="Choose a to date" [(ngModel)]="inputObj.toDate">
+          <input matInput [matDatepicker]="toDatePicker" placeholder="Choose a to date" name="toDate" #toDate="ngModel"
+            [(ngModel)]="inputObj.toDate">
           <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #toDatePicker></mat-datepicker>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" (click)="onSubmit()" class="custom-btn">Submit</button>
-      </div>
+        <button mat-raised-button color="primary" class="custom-btn">Submit</button>
+      </form>
 
       <div fxFlex="80%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
         <app-weather-chart [chartData]="chartData" [metric]="chartMetric" fxFlexFill></app-weather-chart>
