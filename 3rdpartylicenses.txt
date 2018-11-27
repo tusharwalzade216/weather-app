@@ -668,10 +668,10 @@ THE SOFTWARE.
 >>>>>>> Initial commit
 
 
-@angular/material/form-field
-
 @angular/forms
 MIT
+
+@angular/material/form-field
 
 @angular/material/select
 
